@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090914" />
+    <meta
+      name="description"
+      content="Eventify — discover experiences, explore communities, and find your next event."
+    />
+    <title>Eventify — Find your next experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Eventify home"
+        ><span class="brand-mark">e</span
+        ><span>eventify<span class="brand-dot">.</span></span></a
+      >
+      <button
+        class="mobile-menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#discover">Discover</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#organizers">For organizers</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon-button favorite-nav"
+          id="favoritesNav"
+          aria-label="Show saved events"
+          title="Saved events"
+        >
+          <span>♡</span><i id="favoriteCount">0</i>
+        </button>
+        <button class="button button-ghost" data-backend>Log in</button>
+        <button class="button button-primary header-cta" data-backend>
+          Get started <span>↗</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-pulse"></span> ESSAYEB'S PRODUCTIONS
+          </div>
+          <h1>
+            Make room for<br />
+            <span class="gradient-text">something</span>
+            <em> unforgettable.</em>
+          </h1>
+          <p class="hero-description">
+            Find the experiences worth stepping out for. Discover music,
+            culture, ideas and the people who make them happen.
+          </p>
+          <div class="hero-actions">
+            <a href="#discover" class="button button-primary button-large"
+              >Explore events <span>↗</span></a
+            >
+            <a href="#organizers" class="text-link"
+              >I'm an organizer <span>→</span></a
+            >
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack">
+              <span>R</span><span>M</span><span>A</span><span>+</span>
+            </div>
+            <div>
+              <strong>Good things happen together.</strong
+              ><small>Explore the community around you.</small>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Featured event preview">
+          <div class="hero-orbit orbit-a"></div>
+          <div class="hero-orbit orbit-b"></div>
+          <div class="hero-image-card">
+            <img
+              src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=85"
+              alt="Crowd enjoying a live music festival"
+            />
+            <div class="image-shade"></div>
+            <div class="floating-tag">
+              <span class="live-dot"></span> THE CITY IS ALIVE
+            </div>
+            <div class="hero-image-caption">
+              <span class="mini-label">EDITOR'S PICK</span>
+              <h3>Find your<br />next favorite.</h3>
+              <span class="caption-arrow">↗</span>
+            </div>
+          </div>
+          <div class="floating-note">
+            <span class="note-icon">✦</span>
+            <div>
+              <strong>Experiences, curated.</strong
+              ><small>Made for your kind of curious.</small>
+            </div>
+          </div>
+          <div class="sparkle sparkle-one">✳</div>
+          <div class="sparkle sparkle-two">✦</div>
+        </div>
+        <div class="hero-bottom-line">
+          <span>DISCOVER WHAT MOVES YOU</span><span>SCROLL TO EXPLORE ↓</span>
+        </div>
+      </section>
+
+      <section class="discover-section section-shell" id="discover">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">THE GOOD STUFF</div>
+            <h2>Find your <span class="gradient-text">next thing.</span></h2>
+            <p>Fresh plans, new perspectives, and moments waiting to happen.</p>
+          </div>
+          <div class="heading-side-note">
+            A LITTLE LESS SCROLLING.<br /><span>A LOT MORE LIVING.</span>
+          </div>
+        </div>
+
+        <div class="search-panel">
+          <label class="search-field"
+            ><span class="field-icon">⌕</span
+            ><span class="sr-only">Search events</span
+            ><input
+              id="searchInput"
+              type="search"
+              placeholder="Search events, artists, experiences..."
+              autocomplete="off"
+          /></label>
+          <span class="search-divider"></span>
+          <label class="search-field location-field"
+            ><span class="field-icon">⌖</span
+            ><span class="sr-only">Location</span
+            ><input
+              id="locationInput"
+              type="text"
+              placeholder="City or location"
+          /></label>
+          <button class="button button-primary search-button" id="searchButton">
+            Find events <span>→</span>
+          </button>
+        </div>
+
+        <div class="filter-row" id="categories">
+          <div
+            class="filter-list"
+            id="categoryFilters"
+            aria-label="Filter by category"
+          >
+            <button class="filter-chip selected" data-category="All">
+              ✦ <span>All events</span>
+            </button>
+            <button class="filter-chip" data-category="Music">
+              ♫ <span>Music</span>
+            </button>
+            <button class="filter-chip" data-category="Technology">
+              ⌘ <span>Technology</span>
+            </button>
+            <button class="filter-chip" data-category="Art & Culture">
+              ▧ <span>Art & Culture</span>
+            </button>
+            <button class="filter-chip" data-category="Sports">
+              ⚡ <span>Sports</span>
+            </button>
+            <button class="filter-chip" data-category="Business">
+              ↗ <span>Business</span>
+            </button>
+          </div>
+          <button class="sort-button" id="sortButton">
+            ↕ <span>Featured</span>
+          </button>
+        </div>
+
+        <div class="results-meta">
+          <span id="resultsLabel">Curated for curious minds</span
+          ><button class="clear-filters" id="clearFilters">
+            Clear filters <span>×</span>
+          </button>
+        </div>
+        <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+        <div class="empty-state hidden" id="emptyState">
+          <div class="empty-icon">⌕</div>
+          <h3>No events found</h3>
+          <p>Try another search or choose a different category.</p>
+          <button class="button button-ghost" id="resetSearch">
+            Reset search
+          </button>
+        </div>
+        <div class="load-more-wrap">
+          <button class="button button-outline" id="loadMore">
+            Explore all events <span>↓</span>
+          </button>
+        </div>
+        <p class="demo-note">
+          <span>ⓘ</span> Demo experience: all listed events and details are
+          fictional sample content.
+        </p>
+      </section>
+
+      <section class="organizer-section section-shell" id="organizers">
+        <div class="organizer-card">
+          <div class="organizer-glow"></div>
+          <div class="organizer-content">
+            <div class="eyebrow">
+              <span class="eyebrow-pulse"></span> BUILT FOR THE PEOPLE WHO MAKE
+              IT HAPPEN
+            </div>
+            <h2>
+              Your event deserves<br />a
+              <span class="gradient-text">bigger stage.</span>
+            </h2>
+            <p>
+              Bring your community together. Eventify is being built to help
+              organizers showcase their events and reach the right audience.
+            </p>
+            <button
+              class="button button-primary button-large"
+              id="createEventButton"
+            >
+              Create an event <span>↗</span>
+            </button>
+          </div>
+          <div class="organizer-art">
+            <div class="art-ring ring-one"></div>
+            <div class="art-ring ring-two"></div>
+            <div class="art-center">e<span>.</span></div>
+            <div class="art-label label-top">IDEAS → EXPERIENCES</div>
+            <div class="art-label label-bottom">MAKE IT HAPPEN ✦</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bottom-cta section-shell">
+        <div>
+          <div class="eyebrow">THE NEXT CHAPTER STARTS HERE</div>
+          <h2>
+            Go where the good<br /><span class="gradient-text"
+              >stories begin.</span
+            >
+          </h2>
+        </div>
+        <button class="button button-primary button-large" data-backend>
+          Join Eventify <span>↗</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand" href="#home"
+          ><span class="brand-mark">e</span
+          ><span>eventify<span class="brand-dot">.</span></span></a
+        >
+        <p>Discover more. Experience together.</p>
+        <div class="footer-links">
+          <a href="#discover">Discover</a><a href="#organizers">Organizers</a
+          ><button data-backend>Contact</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Eventify. Concept project by Rayen Essayeb.</span
+        ><span>DESIGNED TO BRING PEOPLE TOGETHER <b>✦</b></span>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop hidden" id="modalBackdrop" role="presentation">
+      <section
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" id="modalClose" aria-label="Close dialog">
+          ×
+        </button>
+        <div id="modalContent"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
