@@ -4,13 +4,13 @@
 **Année :** 2026  
 **Version :** 1.0 — Front-end prototype
 
-## 1. Présentation du concept
+## Présentation du concept
 
 Eventify est un concept de plateforme web de découverte et de gestion d'événements. Son objectif est de proposer une expérience claire et premium pour explorer des événements, rechercher des activités par nom ou localisation, consulter leurs informations et enregistrer ses favoris.
 
 Le projet est conçu comme un prototype de portfolio informatique. Les événements affichés sont des **données fictives de démonstration** et ne représentent pas des événements réellement disponibles.
 
-## 2. Fonctionnalités front-end disponibles
+## Fonctionnalités front-end disponibles
 
 - Page d'accueil avec présentation de la plateforme.
 - Navigation responsive pour ordinateur, tablette et téléphone.
@@ -24,7 +24,7 @@ Le projet est conçu comme un prototype de portfolio informatique. Les événeme
 - Fenêtres modales informatives pour les actions qui nécessitent un backend.
 - Mise en page adaptée aux préférences de réduction des animations du système.
 
-## 3. Technologies
+## Technologies
 
 - **HTML5** — structure sémantique des pages.
 - **CSS3** — design responsive, animations, transitions et mise en page.
@@ -34,21 +34,7 @@ Le projet est conçu comme un prototype de portfolio informatique. Les événeme
 
 Aucun framework JavaScript ou CSS n'est utilisé. Aucun serveur, PHP, base de données ou service backend n'est requis pour ouvrir cette version.
 
-## 4. Installation et lancement
-
-1. Télécharger et extraire `Eventify_Rayen_Essayeb.zip`.
-2. Ouvrir le dossier `Eventify`.
-3. Double-cliquer sur `index.html` pour lancer le site dans un navigateur moderne.
-
-### Avec XAMPP Lite (facultatif)
-
-1. Copier le dossier `Eventify` dans le dossier `www` de XAMPP Lite.
-2. Démarrer Apache depuis le panneau XAMPP.
-3. Ouvrir `http://localhost/Eventify/` dans le navigateur.
-
-Le projet reste entièrement front-end : Apache sert simplement les fichiers statiques. Il n'est pas nécessaire de configurer MySQL.
-
-## 5. État actuel du projet et limites
+## État actuel du projet et limites
 
 Cette livraison est un **prototype front-end uniquement**.
 
@@ -62,7 +48,7 @@ Les favoris sont conservés uniquement dans le stockage local du navigateur util
 
 Les images distantes et les polices nécessitent une connexion Internet. Si elles ne se chargent pas, les cartes conservent leur structure et leurs couleurs de fond.
 
-## 6. Améliorations futures
+## Améliorations futures
 
 - Développer une API backend et une base de données.
 - Ajouter l'inscription, la connexion et les profils utilisateurs.
@@ -74,7 +60,7 @@ Les images distantes et les polices nécessitent une connexion Internet. Si elle
 - Ajouter une modération, une validation des événements et des outils d'administration.
 - Améliorer l'accessibilité, les tests et l'optimisation des performances.
 
-## 7. Structure du projet
+## Structure du projet
 
 ```text
 Eventify/
